@@ -1,4 +1,4 @@
-console.log("updated");
+console.log("updated 2");
 //BASS DRUM
 const bassDrum = new Howl({
   src: [
