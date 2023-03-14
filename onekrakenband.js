@@ -137,7 +137,7 @@ snareDrum.play();
 
 const rgame = new rive.Rive({
   src:
-    "https://ucarecdn.com/05d6c77c-47f5-4e12-983b-9a21deb76f0d/one_kraken_band.riv",
+    "https://ucarecdn.com/e22aa258-72cd-4992-8a75-94f21dce1c71/one_kraken_band.riv",
   canvas: document.getElementById("oneKrakenBand"),
   autoplay: true,
   artboard: "New Artboard",
