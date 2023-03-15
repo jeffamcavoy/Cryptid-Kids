@@ -1,4 +1,4 @@
-console.log('updated 3/15')
+console.log('updated 3/15. v2')
 let fishNumber = 8;
 
 //BASS DRUM
@@ -10,7 +10,6 @@ const bassDrum = new Howl({
   // mute: true,
   volume: 0.0
 });
-
 
 function playBassDrum() {
   bassDrum.volume(1.0);
