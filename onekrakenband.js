@@ -1,4 +1,4 @@
-
+console.log('updated 3/15')
 let fishNumber = 8;
 
 //BASS DRUM
@@ -160,13 +160,13 @@ const rgame = new rive.Rive({
     function increaseNumber() {
       fishNumber++;
       fishInput.value = fishNumber;
-      console.log(fishInput);
+      //console.log(fishInput);
     }
 
     function decreaseNumber() {
       fishNumber--;
       fishInput.value = fishNumber;
-      console.log(fishInput);
+      //console.log(fishInput);
     }
     const newStates = riveEvent.data;
     newStates.forEach((state) => {
