@@ -1,3 +1,4 @@
+
 let fishNumber = 8;
 
 //BASS DRUM
@@ -141,7 +142,9 @@ function pauseElectricGuitar() {
 let fishInput;
 const rgame = new rive.Rive({
   src:
+
     "https://ucarecdn.com/39a76cde-3b25-456e-9590-35afa3dfbd14/one_kraken_band.riv",
+
   canvas: document.getElementById("oneKrakenBand"),
   autoplay: true,
   artboard: "New Artboard",
