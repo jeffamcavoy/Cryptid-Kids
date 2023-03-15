@@ -1,4 +1,4 @@
-
+console.log('updated 3/15. v2')
 let fishNumber = 8;
 
 //BASS DRUM
@@ -10,7 +10,6 @@ const bassDrum = new Howl({
   // mute: true,
   volume: 0.0
 });
-bassDrum.play();
 
 function playBassDrum() {
   bassDrum.volume(1.0);
@@ -26,7 +25,6 @@ const piano = new Howl({
   // mute: true,
   volume: 0.0
 });
-piano.play();
 
 function playPiano() {
   piano.volume(0.6);
@@ -43,7 +41,6 @@ const trumpet = new Howl({
   // mute: true,
   volume: 0.0
 });
-trumpet.play();
 
 function playTrumpet() {
   trumpet.volume(0.6);
@@ -61,8 +58,6 @@ const snareDrum = new Howl({
   volume: 0.0
 });
 
-snareDrum.play();
-
 function playSnareDrum() {
   snareDrum.volume(1.0);
 }
@@ -79,8 +74,6 @@ const bassGuitar = new Howl({
   volume: 0.0
 });
 
-bassGuitar.play();
-
 function playBassGuitar() {
   bassGuitar.volume(1.0);
 }
@@ -94,8 +87,6 @@ const shaker = new Howl({
   loop: true,
   volume: 0.0
 });
-
-shaker.play();
 
 function playShaker() {
   shaker.volume(0.5);
@@ -113,8 +104,6 @@ const vibes = new Howl({
   volume: 0.0
 });
 
-vibes.play();
-
 function playVibes() {
   vibes.volume(1.0);
 }
@@ -131,7 +120,7 @@ const electricGuitar = new Howl({
   volume: 0.0
 });
 
-electricGuitar.play();
+
 
 function playElectricGuitar() {
   electricGuitar.volume(0.3);
@@ -139,6 +128,17 @@ function playElectricGuitar() {
 function pauseElectricGuitar() {
   electricGuitar.volume(0.0);
 }
+
+//PLAY ALL INSTRUMENTS
+bassDrum.play();
+electricGuitar.play();
+vibes.play();
+shaker.play();
+bassGuitar.play();
+snareDrum.play();
+trumpet.play();
+piano.play();
+
 let fishInput;
 const rgame = new rive.Rive({
   src:
@@ -159,13 +159,13 @@ const rgame = new rive.Rive({
     function increaseNumber() {
       fishNumber++;
       fishInput.value = fishNumber;
-      console.log(fishInput);
+      //console.log(fishInput);
     }
 
     function decreaseNumber() {
       fishNumber--;
       fishInput.value = fishNumber;
-      console.log(fishInput);
+      //console.log(fishInput);
     }
     const newStates = riveEvent.data;
     newStates.forEach((state) => {
