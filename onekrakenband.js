@@ -1,4 +1,6 @@
-console.log("updated 2");
+
+let fishNumber = 8;
+
 //BASS DRUM
 const bassDrum = new Howl({
   src: [
@@ -8,6 +10,7 @@ const bassDrum = new Howl({
   // mute: true,
   volume: 0.0
 });
+bassDrum.play();
 
 function playBassDrum() {
   bassDrum.volume(1.0);
@@ -23,6 +26,7 @@ const piano = new Howl({
   // mute: true,
   volume: 0.0
 });
+piano.play();
 
 function playPiano() {
   piano.volume(0.6);
@@ -39,6 +43,7 @@ const trumpet = new Howl({
   // mute: true,
   volume: 0.0
 });
+trumpet.play();
 
 function playTrumpet() {
   trumpet.volume(0.6);
@@ -56,6 +61,8 @@ const snareDrum = new Howl({
   volume: 0.0
 });
 
+snareDrum.play();
+
 function playSnareDrum() {
   snareDrum.volume(1.0);
 }
@@ -72,6 +79,8 @@ const bassGuitar = new Howl({
   volume: 0.0
 });
 
+bassGuitar.play();
+
 function playBassGuitar() {
   bassGuitar.volume(1.0);
 }
@@ -85,6 +94,8 @@ const shaker = new Howl({
   loop: true,
   volume: 0.0
 });
+
+shaker.play();
 
 function playShaker() {
   shaker.volume(0.5);
@@ -102,6 +113,8 @@ const vibes = new Howl({
   volume: 0.0
 });
 
+vibes.play();
+
 function playVibes() {
   vibes.volume(1.0);
 }
@@ -118,68 +131,94 @@ const electricGuitar = new Howl({
   volume: 0.0
 });
 
+electricGuitar.play();
+
 function playElectricGuitar() {
   electricGuitar.volume(0.3);
 }
 function pauseElectricGuitar() {
   electricGuitar.volume(0.0);
 }
-
-//PLAY INSTRUMENTS
-bassDrum.play();
-electricGuitar.play();
-vibes.play();
-shaker.play();
-bassGuitar.play();
-trumpet.play();
-piano.play();
-snareDrum.play();
-
+let fishInput;
 const rgame = new rive.Rive({
   src:
-    "https://ucarecdn.com/e22aa258-72cd-4992-8a75-94f21dce1c71/one_kraken_band.riv",
+
+    "https://ucarecdn.com/39a76cde-3b25-456e-9590-35afa3dfbd14/one_kraken_band.riv",
+
   canvas: document.getElementById("oneKrakenBand"),
   autoplay: true,
   artboard: "New Artboard",
   stateMachines: ["State Machine 1"],
   onLoad: () => {
     rgame.resizeDrawingSurfaceToCanvas();
+    fishInput = rgame.stateMachineInputs("State Machine 1")[9];
+    fishInput.value = 0;
   },
+
   onStateChange: (riveEvent) => {
+    function increaseNumber() {
+      fishNumber++;
+      fishInput.value = fishNumber;
+      console.log(fishInput);
+    }
+
+    function decreaseNumber() {
+      fishNumber--;
+      fishInput.value = fishNumber;
+      console.log(fishInput);
+    }
     const newStates = riveEvent.data;
     newStates.forEach((state) => {
       if (state.indexOf("Bass Drum 100") > -1) {
         playBassDrum();
+        increaseNumber();
+        //console.log("fishInput", fishInput);
       } else if (state.indexOf("Bass Drum 0") > -1) {
         pauseBassDrum();
+        decreaseNumber();
+        //console.log("fishInput", fishInput);
       } else if (state.indexOf("Snare 100") > -1) {
         playSnareDrum();
+        increaseNumber();
       } else if (state.indexOf("Snare 0") > -1) {
         pauseSnareDrum();
+        decreaseNumber();
       } else if (state.indexOf("Piano 100") > -1) {
         playPiano();
+        increaseNumber();
       } else if (state.indexOf("Piano 0") > -1) {
         pausePiano();
+        decreaseNumber();
       } else if (state.indexOf("Trumpet 100") > -1) {
         playTrumpet();
+        increaseNumber();
       } else if (state.indexOf("Trumpet 0") > -1) {
         pauseTrumpet();
+        decreaseNumber();
       } else if (state.indexOf("Bass Guitar 100") > -1) {
         playBassGuitar();
+        increaseNumber();
       } else if (state.indexOf("Bass Guitar 0") > -1) {
         pauseBassGuitar();
+        decreaseNumber();
       } else if (state.indexOf("Shaker 100") > -1) {
         playShaker();
+        increaseNumber();
       } else if (state.indexOf("Shaker 0") > -1) {
         pauseShaker();
+        decreaseNumber();
       } else if (state.indexOf("Vibes 100") > -1) {
         playVibes();
+        increaseNumber();
       } else if (state.indexOf("Vibes 0") > -1) {
         pauseVibes();
+        decreaseNumber();
       } else if (state.indexOf("Electric Guitar 100") > -1) {
         playElectricGuitar();
+        increaseNumber();
       } else if (state.indexOf("Electric Guitar 0") > -1) {
         pauseElectricGuitar();
+        decreaseNumber();
       }
     });
   }
