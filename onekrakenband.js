@@ -1,4 +1,4 @@
-console.log('updated 3/15. v2')
+console.log('updated 3/16')
 let fishNumber = 8;
 
 //BASS DRUM
@@ -143,7 +143,7 @@ let fishInput;
 const rgame = new rive.Rive({
   src:
 
-    "https://ucarecdn.com/39a76cde-3b25-456e-9590-35afa3dfbd14/one_kraken_band.riv",
+    "https://ucarecdn.com/08c33740-3981-4e5b-8f3f-6ad02c702c6c/one_kraken_band.riv",
 
   canvas: document.getElementById("oneKrakenBand"),
   autoplay: true,
