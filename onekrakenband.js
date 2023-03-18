@@ -4,7 +4,7 @@ let fishNumber = 8;
 //BASS DRUM
 const bassDrum = new Howl({
   src: [
-    "https://ucarecdn.com/10c905a5-f93e-44e0-b328-377f74811907/BassDrum.wav"
+    "https://ucarecdn.com/7da2070e-e50c-4558-8153-ee7a52b6ef6f/bassdrum.mp3"
   ],
   loop: true,
   // mute: true,
@@ -20,7 +20,7 @@ function pauseBassDrum() {
 
 //PIANO
 const piano = new Howl({
-  src: ["https://ucarecdn.com/0ce5008d-c4cd-4ab7-8bdf-37f4c417277d/Piano.wav"],
+  src: ["https://ucarecdn.com/19679629-2281-4337-b4f2-2213a96c912a/piano.mp3"],
   loop: true,
   // mute: true,
   volume: 0.0
@@ -35,7 +35,7 @@ function pausePiano() {
 //TRUMPET
 const trumpet = new Howl({
   src: [
-    "https://ucarecdn.com/b3671dde-b3eb-49ff-b0d1-ee77fdcfd921/Trumpet.wav"
+    "https://ucarecdn.com/c68ac461-fe1f-4e0e-97d9-fa292b592a1d/trumpet.mp3"
   ],
   loop: true,
   // mute: true,
@@ -52,7 +52,7 @@ function pauseTrumpet() {
 //SNARE DRUM
 const snareDrum = new Howl({
   src: [
-    "https://ucarecdn.com/a0c612e6-84df-4dcf-b8e0-fca36a24c5ad/SnareDrum.wav"
+    "https://ucarecdn.com/83e56c6d-5a15-44e2-85db-2b6b04795ae4/snaredrum.mp3"
   ],
   loop: true,
   volume: 0.0
@@ -68,7 +68,7 @@ function pauseSnareDrum() {
 //BASS GUITAR
 const bassGuitar = new Howl({
   src: [
-    "https://ucarecdn.com/ca7dff2b-9b62-4ced-96f0-3bcad9d40095/BassGuitar.wav"
+    "https://ucarecdn.com/cfeed590-a2f2-4203-bc67-5c393855c364/bassguitar.mp3"
   ],
   loop: true,
   volume: 0.0
@@ -83,7 +83,7 @@ function pauseBassGuitar() {
 
 //SHAKER
 const shaker = new Howl({
-  src: ["https://ucarecdn.com/599ea77a-a176-499f-bc3a-a445c6e5415d/Shaker.wav"],
+  src: ["https://ucarecdn.com/c199a47c-581a-4b83-ba42-69c720339f06/shaker.mp3"],
   loop: true,
   volume: 0.0
 });
@@ -98,7 +98,7 @@ function pauseShaker() {
 //VIBES
 const vibes = new Howl({
   src: [
-    "https://ucarecdn.com/1983453b-3e7c-40ce-b8ba-f61fc4b49caf/Vibraphone.wav"
+    "https://ucarecdn.com/5d84c936-7cd0-4e58-ac9d-4f1915ddd26c/vibraphone.mp3"
   ],
   loop: true,
   volume: 0.0
@@ -114,7 +114,7 @@ function pauseVibes() {
 //ELECTRIC GUITAR
 const electricGuitar = new Howl({
   src: [
-    "https://ucarecdn.com/2aab7444-1295-4e0c-8d26-3465dfd710ae/ElectricGuitar.wav"
+    "https://ucarecdn.com/576c85bd-5502-4e90-99e9-450ccbda89e8/electricguitar.mp3"
   ],
   loop: true,
   volume: 0.0
