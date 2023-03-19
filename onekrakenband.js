@@ -143,7 +143,7 @@ let fishInput;
 const rgame = new rive.Rive({
   src:
 
-    "https://ucarecdn.com/3867fe1a-98ce-4a07-b6a0-fc1f6ae70c67/one_kraken_band.riv",
+    "https://ucarecdn.com/f8905f17-cf6c-4642-ba3b-bce57ea299a9/one_kraken_band.riv",
 
   canvas: document.getElementById("oneKrakenBand"),
   autoplay: true,
