@@ -1,11 +1,14 @@
-console.log('updated 3/19')
+console.log("updated 3/24 with Sprites");
 let fishNumber = 8;
 
 //BASS DRUM
 const bassDrum = new Howl({
   src: [
-    "https://ucarecdn.com/10c905a5-f93e-44e0-b328-377f74811907/BassDrum.wav"
+    "https://ucarecdn.com/04eb95b8-c762-400f-b2c1-97d97e0ed92a/bassdrum5.MP3"
   ],
+  sprite: {
+    bassDrum: [33, 6866]
+  },
   loop: true,
   // mute: true,
   volume: 0.0
@@ -20,9 +23,12 @@ function pauseBassDrum() {
 
 //PIANO
 const piano = new Howl({
-  src: ["https://ucarecdn.com/0ce5008d-c4cd-4ab7-8bdf-37f4c417277d/Piano.wav"],
+  src: ["https://ucarecdn.com/74208a78-a945-4001-acfa-48d9cd779ddb/piano5.MP3"],
   loop: true,
-  // mute: true,
+  sprite: {
+    piano: [33, 6866]
+  },
+
   volume: 0.0
 });
 
@@ -35,10 +41,12 @@ function pausePiano() {
 //TRUMPET
 const trumpet = new Howl({
   src: [
-    "https://ucarecdn.com/b3671dde-b3eb-49ff-b0d1-ee77fdcfd921/Trumpet.wav"
+    "https://ucarecdn.com/9ab41ee7-3613-461f-8e6d-cf033ddfc601/trumpet5.MP3"
   ],
   loop: true,
-  // mute: true,
+  sprite: {
+    trumpet: [33, 6866]
+  },
   volume: 0.0
 });
 
@@ -52,8 +60,11 @@ function pauseTrumpet() {
 //SNARE DRUM
 const snareDrum = new Howl({
   src: [
-    "https://ucarecdn.com/a0c612e6-84df-4dcf-b8e0-fca36a24c5ad/SnareDrum.wav"
+    "https://ucarecdn.com/40397a32-3920-4d40-9171-bd5ae18d013b/snare5.MP3"
   ],
+  sprite: {
+    snareDrum: [33, 6866]
+  },
   loop: true,
   volume: 0.0
 });
@@ -68,8 +79,11 @@ function pauseSnareDrum() {
 //BASS GUITAR
 const bassGuitar = new Howl({
   src: [
-    "https://ucarecdn.com/ca7dff2b-9b62-4ced-96f0-3bcad9d40095/BassGuitar.wav"
+    "https://ucarecdn.com/eabd4fe3-ca52-4f00-bfd8-b597070f39f2/bassguitar5.MP3"
   ],
+  sprite: {
+    bassGuitar: [33, 6866]
+  },
   loop: true,
   volume: 0.0
 });
@@ -83,7 +97,10 @@ function pauseBassGuitar() {
 
 //SHAKER
 const shaker = new Howl({
-  src: ["https://ucarecdn.com/599ea77a-a176-499f-bc3a-a445c6e5415d/Shaker.wav"],
+  src: ["https://ucarecdn.com/9fe23097-7893-4d46-9a72-06a34ac92794/shaker5.MP3"],
+  sprite: {
+    shaker: [33, 6866]
+  },
   loop: true,
   volume: 0.0
 });
@@ -97,9 +114,10 @@ function pauseShaker() {
 
 //VIBES
 const vibes = new Howl({
-  src: [
-    "https://ucarecdn.com/1983453b-3e7c-40ce-b8ba-f61fc4b49caf/Vibraphone.wav"
-  ],
+  src: ["https://ucarecdn.com/06d36b47-eb9c-42bb-9f8e-982cbe0cb0cd/vibes5.MP3"],
+  sprite: {
+    vibes: [33, 6866]
+  },
   loop: true,
   volume: 0.0
 });
@@ -114,13 +132,13 @@ function pauseVibes() {
 //ELECTRIC GUITAR
 const electricGuitar = new Howl({
   src: [
-    "https://ucarecdn.com/2aab7444-1295-4e0c-8d26-3465dfd710ae/ElectricGuitar.wav"
-  ],
+    "https://ucarecdn.com/a1db42c3-eca9-4efc-b8d5-b90090f7384a/electricguitar5.MP3"
+  ],sprite: {
+    electricGuitar: [33, 6866]
+  },
   loop: true,
   volume: 0.0
 });
-
-
 
 function playElectricGuitar() {
   electricGuitar.volume(0.3);
@@ -130,19 +148,18 @@ function pauseElectricGuitar() {
 }
 
 //PLAY ALL INSTRUMENTS
-bassDrum.play();
-electricGuitar.play();
-vibes.play();
-shaker.play();
-bassGuitar.play();
-snareDrum.play();
-trumpet.play();
-piano.play();
+bassDrum.play('bassDrum');
+electricGuitar.play('electricGuitar');
+vibes.play('vibes');
+shaker.play('shaker');
+bassGuitar.play('bassGuitar');
+snareDrum.play('snareDrum');
+trumpet.play('trumpet');
+piano.play('piano');
 
 let fishInput;
 const rgame = new rive.Rive({
   src:
-
     "https://ucarecdn.com/f8905f17-cf6c-4642-ba3b-bce57ea299a9/one_kraken_band.riv",
 
   canvas: document.getElementById("oneKrakenBand"),
